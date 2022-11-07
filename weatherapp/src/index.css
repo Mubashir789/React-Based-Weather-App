@@ -13,14 +13,51 @@ code {
 }
 
 #t{
-  width: 70%;
+  width: 20%;
   padding: 12px 20px;
   margin: 8px 0;
   /* box-sizing: border-box */
   border: 5px solid green;
   border-radius: 15px;
+  margin-left: 5px;
   /* background-color: #b0c4bc;
   color: white; */
 
 }
+button{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  background-color:aliceblue;
+  color: rgb(26, 7, 109);
+}
 
+.abc{
+  margin-top: 10%;
+  background-color: black;
+  color: aliceblue;
+  width: 50%;
+  border-radius: 15px;
+  animation: mymove 5s infinite;
+border: 15px solid aqua;
+
+}
+
+@keyframes mymove {
+  50% {
+    border-bottom-color: rgb(39, 176, 221);
+    border-top-color: rgb(69, 238, 154);
+    border-left-color: rgb(221, 116, 174);
+    border-right-color: rgb(235, 79, 79);
+    box-shadow: 10px 20px 30px gray;
+  }
+}
+
+
+button:hover{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgb(80, 23, 23);
+  color: aliceblue;
+}
