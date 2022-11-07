@@ -81,40 +81,43 @@ function Hi() {
 
     <hr /> */}
 
-    <center>
+  <center>  <div className="abc"><center>
 
-    <h1>
-      Weather Forecast
-    </h1>
+<h1>
+  Weather Forecast
+</h1>
 
 
-    <form onSubmit={submitHandler}>
+<form onSubmit={submitHandler}>
 
-      <input
-        id='t'
-        type="text"
-        placeholder='Enter your city name'
-        onChange={(e) => {
-            setCityName(e.target.value)
-        }}
-        />
+  <input
+    id='t'
+    type="text"
+    placeholder='Enter your city name'
+    onChange={(e) => {
+        setCityName(e.target.value)
+    }}
+    />
 
-      <button type="submit" id='b'>Get Weather</button>
+  <button type="submit" id='b'>Get Weather</button>
 
-    </form>
+</form>
 
-    <br />
+<br />
 
-    {(weather?.name)?
+{(weather?.name)?
 
 <div>
-        <div>Weather of {weather?.name}</div>
-        <div>Current Temp {weather?.main?.temp}</div>
-      </div>
-      :
-      null
-    }
-    </center>
+    <div>Weather of {weather?.name}</div>
+    <div>Current Temp {weather?.main?.temp}</div>
+    <div>Minimum {weather?.main?.temp_min}</div>
+    <div>Maximum {weather?.main?.temp_max}</div>
+    <div>Humidity {weather?.main?.humidity}</div>
+  </div>
+  :
+  null
+}
+</center></div></center>
 
   </div>;
 }
