@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./index.css"
 
 // let num1 = 0;
 
@@ -80,22 +81,25 @@ function Hi() {
 
     <hr /> */}
 
+    <center>
 
     <h1>
-      weather app:
+      Weather Forecast
     </h1>
+
 
     <form onSubmit={submitHandler}>
 
       <input
+        id='t'
         type="text"
-        placeholder='enter your city name'
+        placeholder='Enter your city name'
         onChange={(e) => {
-          setCityName(e.target.value)
+            setCityName(e.target.value)
         }}
-      />
+        />
 
-      <button type="submit">Get Weather</button>
+      <button type="submit" id='b'>Get Weather</button>
 
     </form>
 
@@ -103,13 +107,14 @@ function Hi() {
 
     {(weather?.name)?
 
-      <div>
+<div>
         <div>Weather of {weather?.name}</div>
         <div>Current Temp {weather?.main?.temp}</div>
       </div>
       :
       null
     }
+    </center>
 
   </div>;
 }
